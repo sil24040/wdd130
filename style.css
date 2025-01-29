@@ -1,55 +1,77 @@
-<style>
-    body {
-        background-color: pink;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Website</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
 
-    #content {
-        max-width: 900px;
-        background-color: white;
-        margin: 0 auto;
-    }
+        #content {
+            max-width: 900px;
+            background-color: white;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    nav {
-        background-color: steelblue;
-        padding: 20px;
-    }
+        nav, footer {
+            background-color: steelblue;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
 
-    nav, footer {
-        background-color: steelblue;
-        padding: 20px;
-        color: white;
-        text-align: center;
-    }
+        nav a {
+            padding: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
 
-    nav a {
-        padding: 15px;
-        font-size: 20px;
-        text-decoration: none;
-        color: white;
-        margin: 10px;
-    }
+        nav a:hover {
+            background-color: lightblue;
+            color: steelblue;
+        }
 
-    nav a:hover {
-        background-color: lightblue;
-        color: steelblue;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    h1 {
-        text-align: center;
-    }
+        img {
+            width: 800px;
+            display: block;
+            margin: 50px auto;
+        }
 
-    img {
-        width: 800px;
-        display: block;
-        margin: 50px auto;
-    }
+        #main-topic {
+            color: steelblue;
+        }
 
-    #main-topic {
-        color: steelblue;
-    }
+        footer a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
 
-    footer a {
-        color: white;
-    }
-</style>
+    <nav>
+        <a href="https://example.com">Home</a>
+        <a href="https://example.com/about">About</a>
+    </nav>
+
+    <div id="content">
+        <h1>Welcome!</h1>
+        <p>My favourite Website is <a href="https://chatgpt.com">ChatGPT</a></p>
+    </div>
+
+    <footer>
+        <p>© 2025 My Website</p>
+        <a href="https://example.com/contact">Contact</a>
+    </footer>
+
+</body>
+</html>
