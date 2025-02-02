@@ -65,18 +65,17 @@ nav a:hover {
 #hero {
     position: relative;
     width: 100%;
-    min-height: 500px; /* Allows content to expand */
+    min-height: 500px; /* Ensures hero section fits */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    overflow: visible; /* Prevents content from being cut off */
+    overflow: hidden;
 }
 
-/* Fixed Hero Image */
+/* Fix Hero Image */
 #hero-img {
     width: 100%;
     max-height: 500px;
@@ -84,21 +83,15 @@ nav a:hover {
     display: block;
 }
 
-/* Fix Hero Message - No Background Box */
+/* Move Hero Message BELOW the Image */
 #hero-msg {
-    position: absolute; /* Keeps text over the hero image */
-    top: 50%; /* Centers vertically */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10; /* Ensures text is above the image */
+    position: relative; /* Removes absolute positioning */
     text-align: center;
+    margin-top: 20px; /* Adds spacing below the image */
     color: #2d4a73; /* Deep navy text */
     font-weight: bold;
-    padding: 0; /* Removes extra spacing */
-    margin: 0;
-    background: none; /* Removes the background box */
-    border-radius: 0; /* Removes rounded corners */
-    box-shadow: none; /* Ensures no shadow effect */
+    padding: 20px;
+    width: 100%;
 }
 
 /* Adjust Text Inside Hero */
@@ -116,7 +109,7 @@ nav a:hover {
 }
 
 /* Buttons */
-.book, .join {
+.book {
     display: inline-block;
     padding: 12px 20px;
     background-color: #2d4a73; /* Deep navy */
@@ -126,9 +119,10 @@ nav a:hover {
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
     text-align: center;
+    margin-top: 10px;
 }
 
-.book:hover, .join:hover {
+.book:hover {
     background-color: #6ac6e2; /* Light blue */
     color: #2d4a73; /* Deep navy */
     text-decoration: underline;
@@ -178,7 +172,7 @@ main section {
 /* Updated Background Container - Ultra Thin Blue Box */
 #background {
     background-color: #2d4a73; /* Keep it blue */
-    height: 200px; /* SUPER THIN NOW */
+    height: 200px; /* Super thin */
     width: 100%;
     position: relative;
     z-index: -1;
