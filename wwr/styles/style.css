@@ -88,7 +88,7 @@ nav a:hover {
 #hero-msg {
     position: absolute; /* Keeps text over the hero image */
     top: 50%; /* Centers vertically */
-    left: 50%; /* Centers horizontally */
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10; /* Ensures text is above the image */
     text-align: center;
@@ -175,34 +175,52 @@ main section {
     height: auto;
 }
 
-/* Updated Background Container */
+/* Updated Background Container - Ultra Thin Blue Box */
 #background {
-    background-color: #dbcca5; /* Light beige */
-    height: 725px;
+    background-color: #2d4a73; /* Keep it blue */
+    height: 200px; /* SUPER THIN NOW */
     width: 100%;
     position: relative;
     z-index: -1;
 }
 
-/* Updated Message Section */
+/* Updated Message Section - Keep Blue */
 .msg {
     position: relative;
     text-align: center;
-    background-color: white;
+    background-color: #2d4a73; /* Same blue color */
     max-width: 800px;
-    margin: -80px auto 40px;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #2d4a73; /* Deep navy for text */
+    margin: -30px auto 40px; /* Adjusted margin to fit better */
+    padding: 20px; /* Smaller padding */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: none; /* Remove shadow */
+    color: white; /* Make text white */
 }
 
+/* Updated Heading and Paragraph Colors */
 .msg h2 {
-    color: #6ac6e2; /* Light blue */
+    color: white; /* Make heading white */
 }
 
 .msg p {
-    color: #2d4a73; /* Deep navy */
+    color: white; /* Make paragraph text white */
+}
+
+/* Updated Button */
+.msg .join {
+    background-color: #D4AC0D; /* Match navigation bar yellow */
+    color: #2d4a73; /* Deep navy for contrast */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.msg .join:hover {
+    background-color: white; /* Change hover to white */
+    color: #2d4a73; /* Keep deep navy text */
+    text-decoration: underline;
 }
 
 /* Footer */
