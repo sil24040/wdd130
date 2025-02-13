@@ -191,7 +191,7 @@ grid-template-columns: repeat(6, 100px);
   grid-column: 2/6;
   grid-row: 2/6;
   z-index: -1;
-} 
+}
 
 /* Do not make any changes below here */
 .activity {
