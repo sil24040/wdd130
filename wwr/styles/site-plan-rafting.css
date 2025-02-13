@@ -1,164 +1,192 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a & */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap');
 
-:root {
-  /* change the values below to your colors from your palette */
-  --primary-color: #2d4a73   ;
-  --secondary-color: #6ac6e2 ;
-  --accent1-color: #8ccb84  ;
-  --accent2-color: #dbcca5;
-
-  /* change the values below to your chosen font(s) */
-  --heading-font: "Roboto";
-  --paragraph-font: Smooch Sans, Helvetica, sans-serif;
-
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #2d4a73;  /* headlines on a white background */ 
-  --headline-color-on-color: #6ac6e2; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #8ccb84; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #dbcca5; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #05668D  ;
-  --nav-link-color: #396E94;
-  --nav-background-color: #D4AC0D;
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
-}
-
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
+/* General Styles */
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4em;
-  font-size: 18px;
-  text-align: center;
+    background-color: #E3F2FD; /* Soft light blue */
+    font-family: "Smooch Sans", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2d4a73; /* Deep navy for text */
 }
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
-}
-h2 {
-  text-align: center;
-}
-hr {
-  height: 3px;
-  margin: 35px 0;
-  background: var(--accent1-color);
-}
-header {
-  padding: 1em;
-  text-align: center;
-  color: var(--headline-color-on-color);
-  background-color: var(--paragraph-background-color);
-}
-header > h1, header > h2 {
-  color: var(--headline-color-on-color);
-}
-p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
-  padding: 1em;
-}
-.colors {
-  width: 100%;
-  min-width: 350px;
-  margin: 30px auto;
-  text-align: center;
-}
-.colors th {
-  background-color: #999;
-}
-.colors td{
-  width: 25%;
-  height: 3em;
-}
-.primary {
-  background-color: var(--primary-color);
-}
-.secondary {
-  background-color: var(--secondary-color);
-}
-.accent1 {
-  background-color: var(--accent1-color);
-}
-.accent2{
-  background-color: var(--accent2-color);
-}
-p.colored {
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
-}
-nav {
-  background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
-}
-nav  {
-  list-style-type: none;
-  display: flex;
-}
-nav a {
-  padding:1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
-}
-nav a:link, nav a:visited {
-  color: var(--nav-link-color);
-}
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
-}
-.sitemap {
-  display: grid;
-  justify-content: center;
 
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+/* Content Container */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.sitemap > div {
-  text-align: center;
+
+/* Header Styles */
+header {
+    background-color: rgba(45, 74, 115, 0.85); /* Deep navy with transparency */
+    color: #FFFFFF; /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
 }
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
+
+/* Navigation */
+nav {
+    background-color: #D4AC0D; /* Yellow background */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
 }
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
+
+nav a {
+    text-decoration: none;
+    color: #396E94; /* Blue text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 10px;
 }
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
+
+nav a:hover {
+    background-color: #396E94; /* Blue hover */
+    color: #FFFFFF; /* White text on hover */
+    text-decoration: underline;
 }
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+
+/* Logo and Icons */
+.logo, .icon {
+    width: 80px;
 }
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
+
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Allows content to expand */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: visible; /* Prevents content from being cut off */
 }
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+
+/* Fixed Hero Image */
+#hero-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+/* Centering all sections inside main */
+main section {
+    text-align: center;
+}
+
+/* Fix Image Alignment */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-image {
+    width: 65%;
+}
+
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fix Card Image Sizes */
+.card-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Message Section (Top Box) */
+.msg {
+    position: relative;
+    text-align: center;
+    background-color: #2d4a73; /* Deep navy */
+    max-width: 1200px; /* Make it match footer width */
+    min-height: 100px; /* Adjusted height to make it thinner */
+    margin: 40px auto; /* Keep spacing */
+    padding: 20px; /* Adjusted padding */
+    border-radius: 0; /* Removed rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white; /* Ensure text stays white */
+}
+
+/* Footer */
+footer {
+    background-color: #2d4a73; /* Deep navy */
+    color: white;
+    padding: 30px 0;
+    text-align: left; /* Align content to the left */
+    width: 1200px; /* Ensure same width as top box */
+    font-size: 1.3em;
+    margin: 0 auto; /* Center align */
+}
+
+/* Footer Links */
+footer p {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color: #6ac6e2; /* Light blue */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #dbcca5; /* Light beige */
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    justify-content: left; /* Align to the left */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure Footer Stays at the Bottom */
+html, body {
+    height: 100%;
+    margin: 0;
 }

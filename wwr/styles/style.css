@@ -1,192 +1,150 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Smooch+Sans:wght@300;400;600&display=swap');
 
-/* General Styles */
+:root {
+    --primary-color: #2d4a73;
+    --secondary-color: #6ac6e2;
+    --accent1-color: #8ccb84;
+    --accent2-color: #dbcca5;
+    --background-color: #fdfdfd;
+    --footer-bg: #6f7364;
+
+    --heading-font: "Roboto", Arial, sans-serif;
+    --paragraph-font: "Smooch Sans", Helvetica, sans-serif;
+}
+
+/* Global Styles */
 body {
-    background-color: #E3F2FD; /* Soft light blue */
-    font-family: "Smooch Sans", Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #2d4a73; /* Deep navy for text */
-}
-
-/* Content Container */
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header Styles */
-header {
-    background-color: rgba(45, 74, 115, 0.85); /* Deep navy with transparency */
-    color: #FFFFFF; /* White text */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-}
-
-/* Navigation */
-nav {
-    background-color: #D4AC0D; /* Yellow background */
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #396E94; /* Blue text */
-    font-size: 16px;
-    font-weight: bold;
+    font-family: var(--paragraph-font);
+    font-size: 22px;
+    color: #333;
     text-align: center;
-    display: block;
-    padding: 10px;
+    background-color: var(--background-color);
+    margin: 0;
 }
 
-nav a:hover {
-    background-color: #396E94; /* Blue hover */
-    color: #FFFFFF; /* White text on hover */
-    text-decoration: underline;
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Logo and Icons */
-.logo, .icon {
-    width: 80px;
+header .logo img {
+    max-width: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* Hero Section */
-#hero {
+.hero {
     position: relative;
-    width: 100%;
-    min-height: 500px; /* Allows content to expand */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    overflow: visible; /* Prevents content from being cut off */
 }
 
-/* Fixed Hero Image */
-#hero-img {
+.hero img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
-    display: block;
 }
 
-/* Main Content */
-main {
-    text-align: center;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
+.hero .home-title {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    color: var(--accent2-color);
 }
 
-/* Centering all sections inside main */
-main section {
-    text-align: center;
+.hero p {
+    font-size: 1.2em;
 }
 
-/* Fix Image Alignment */
-.image-container {
+.book {
+    background-color: var(--accent1-color);
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Activities Section */
+.activities {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    margin: 40px 0;
 }
 
-.main-image {
-    width: 65%;
-}
-
-.side-images {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Fix Card Image Sizes */
-.card-img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-}
-
-/* Message Section (Top Box) */
-.msg {
-    position: relative;
+.activity {
     text-align: center;
-    background-color: #2d4a73; /* Deep navy */
-    max-width: 1200px; /* Make it match footer width */
-    min-height: 100px; /* Adjusted height to make it thinner */
-    margin: 40px auto; /* Keep spacing */
-    padding: 20px; /* Adjusted padding */
-    border-radius: 0; /* Removed rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: white; /* Ensure text stays white */
+}
+
+.activity img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--accent2-color);
+}
+
+.activity h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Message Section */
+.msg {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 40px;
+    line-height: 1.5em;
+}
+
+.msg img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.join {
+    background-color: var(--accent2-color);
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
-    background-color: #2d4a73; /* Deep navy */
+    background-color: var(--primary-color);
+    padding: 20px;
     color: white;
-    padding: 30px 0;
-    text-align: left; /* Align content to the left */
-    width: 1200px; /* Ensure same width as top box */
-    font-size: 1.3em;
-    margin: 0 auto; /* Center align */
-}
-
-/* Footer Links */
-footer p {
-    margin-bottom: 10px;
-    font-size: 1.3em;
-    text-align: left;
+    text-align: center;
 }
 
 footer a {
+    color: var(--secondary-color);
     text-decoration: none;
-    color: #6ac6e2; /* Light blue */
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: #dbcca5; /* Light beige */
-}
-
-/* Social Icons */
-.social {
-    display: flex;
-    justify-content: left; /* Align to the left */
-    gap: 15px;
+footer .social {
     margin-top: 10px;
 }
 
-.social img {
-    width: 40px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social img:hover {
-    transform: scale(1.1);
-}
-
-/* Ensure Footer Stays at the Bottom */
-html, body {
-    height: 100%;
-    margin: 0;
+footer .social img {
+    width: 24px;
+    margin: 0 5px;
 }
