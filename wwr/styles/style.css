@@ -27,26 +27,26 @@ body {
 header {
     background-color: var(--primary-color);
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
+    align-items: center; 
 }
 
-header .logo img {
+header .logo  {
     max-width: 80px;
 }
 
-nav ul {
+nav {
     list-style: none;
     display: flex;
-    padding: 0;
+    justify-content: space-around;
+    
 }
 
-nav ul li {
+nav {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -127,12 +127,17 @@ nav ul li a {
     cursor: pointer;
 }
 
+#background{
+background-color: #dbcca5;
+height: 720px;
+}
 /* Footer */
 footer {
     background-color: var(--primary-color);
     padding: 20px;
     color: white;
     text-align: center;
+    margin-top: 200px;
 }
 
 footer a {

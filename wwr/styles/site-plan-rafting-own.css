@@ -1,0 +1,192 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* General Styles */
+body {
+    background-color: #E3F2FD; /* Soft light blue */
+    font-family: "Smooch Sans", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2d4a73; /* Deep navy for text */
+}
+
+/* Content Container */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(45, 74, 115, 0.85); /* Deep navy with transparency */
+    color: #FFFFFF; /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #D4AC0D; /* Yellow background */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #396E94; /* Blue text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #396E94; /* Blue hover */
+    color: #FFFFFF; /* White text on hover */
+    text-decoration: underline;
+}
+
+/* Logo and Icons */
+.logo, .icon {
+    width: 80px;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Allows content to expand */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: visible; /* Prevents content from being cut off */
+}
+
+/* Fixed Hero Image */
+#hero-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+/* Centering all sections inside main */
+main section {
+    text-align: center;
+}
+
+/* Fix Image Alignment */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-image {
+    width: 65%;
+}
+
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fix Card Image Sizes */
+.card-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Message Section (Top Box) */
+.msg {
+    position: relative;
+    text-align: center;
+    background-color: #2d4a73; /* Deep navy */
+    max-width: 1200px; /* Make it match footer width */
+    min-height: 100px; /* Adjusted height to make it thinner */
+    margin: 40px auto; /* Keep spacing */
+    padding: 20px; /* Adjusted padding */
+    border-radius: 0; /* Removed rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white; /* Ensure text stays white */
+}
+
+/* Footer */
+footer {
+    background-color: #2d4a73; /* Deep navy */
+    color: white;
+    padding: 30px 0;
+    text-align: left; /* Align content to the left */
+    width: 1200px; /* Ensure same width as top box */
+    font-size: 1.3em;
+    margin: 0 auto; /* Center align */
+}
+
+/* Footer Links */
+footer p {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color: #6ac6e2; /* Light blue */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #dbcca5; /* Light beige */
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    justify-content: left; /* Align to the left */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure Footer Stays at the Bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
