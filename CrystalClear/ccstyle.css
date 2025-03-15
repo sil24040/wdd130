@@ -1,0 +1,187 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Lato');
+
+/* Root Variables */
+:root {
+  /* Color Palette */
+  --primary: #2C3E50; /* Deep Blue - Trust & Professionalism */
+  --secondary: #E67E22; /* Warm Orange - Energy & Approachability */
+  --accent1: #ECF0F1; /* Light Gray - Clean & Modern */
+  --accent2: #27AE60; /* Fresh Green - Growth & Prosperity */
+
+  /* Typography */
+  --heading-font: "Playfair Display", serif;
+  --paragraph-font: "Lato", sans-serif;
+
+  /* Text Colors */
+  --headline-color-on-white: var(--primary);  /* Headlines on white background */ 
+  --headline-color-on-color: white; /* Headlines on colored background */ 
+  --paragraph-color-on-white: var(--primary); /* Paragraph text on white background */ 
+  --paragraph-color-on-color: white; /* Paragraph text on colored background */ 
+
+  /* Background Colors */
+  --paragraph-background-color: var(--primary);
+  --nav-link-color: var(--primary);
+  --nav-background-color: var(--accent1);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--secondary);
+}
+
+/* General Styles */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+  font-family: var(--paragraph-font);
+  background-color: var(--accent1);
+  color: var(--paragraph-color-on-white);
+}
+
+/* Header */
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--primary);
+}
+
+header h1, header h2 {
+  color: var(--headline-color-on-color);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+
+/* Navigation */
+nav {
+  background-color: var(--nav-background-color);
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  border-radius: 5px;
+}
+
+/* Paragraph Styling */
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* Color Palette Display */
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th {
+  background-color: #999;
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.accent1 {
+  background-color: var(--accent1);
+}
+
+.accent2 {
+  background-color: var(--accent2);
+}
+
+/* Sitemap */
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: 
+    ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
+  text-align: center;
+}
+
+.sm-home {
+  grid-area: home;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+}
+
+.sm-page2 {
+  grid-area: page2;
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+}
+
+.sm-page3 {
+  grid-area: page3;
+  background-color: var(--accent2);
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid var(--primary);
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid var(--primary);
+  border-left: 1px solid var(--primary);
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+}
