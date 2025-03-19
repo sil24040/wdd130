@@ -2,479 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Clear Housing</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #3498db;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home1.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding-top: 70px;
-        }
-        
-        .hero-content {
-            width: 100%;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Search Box */
-        .search-box {
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
-            max-width: 800px;
-            margin: -50px auto 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .search-box input {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        
-        .search-box button {
-            width: 100%;
-            padding: 15px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        
-        /* Featured Properties */
-        .featured {
-            padding: 50px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: #2c3e50;
-        }
-        
-        .properties {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .property-card {
-            background: white;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .property-image {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .property-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        
-        .property-image img:hover {
-            transform: scale(1.05);
-        }
-        
-        .property-info {
-            padding: 20px;
-        }
-        
-        .property-info h3 {
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        .property-info p {
-            margin-bottom: 10px;
-            color: #7f8c8d;
-        }
-        
-        .price {
-            font-weight: bold;
-            color: #3498db;
-            font-size: 18px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #2980b9;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            background: #f9f9f9;
-            padding: 50px 0;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .testimonial img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial .name {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 50px 0;
-        }
-        
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        
-        .contact-form textarea {
-            height: 150px;
-        }
-        
-        .contact-form button {
-            padding: 12px 20px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .contact-form button:hover {
-            background: #2980b9;
-        }
-        
-        .contact-info {
-            padding: 30px;
-        }
-        
-        .contact-info h3 {
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .contact-details {
-            margin-bottom: 20px;
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 30px 0;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        
-        .footer-section p {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        .social-links a {
-            margin-right: 15px;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 30px;
-        }
-    </style>
+    <title>CrystalClear Real Estate | Home</title>
+    <link rel="stylesheet" href="plan.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Crystal Clear Housing</div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Listings</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <div id="content">
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Find Your Dream Home</h1>
-                <p>Welcome to <strong>Crystal Clear Housing</strong>, where buying or selling a home is simple and stress-free. Our platform connects buyers and sellers with experienced agents, providing clear property insights, market trends, and expert guidance.</p>
-                <a href="#" class="cta-button">View Listings</a>
-            </div>
-        </div>
-    </section>
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="about.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>        
 
-    <div class="container">
-        <div class="search-box">
-            <input type="text" placeholder="Search for properties by location, price, or features...">
-            <button>Search Properties</button>
-        </div>
-    </div>
-
-    <section class="featured">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Properties</h2>
-            </div>
-            <div class="properties">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="images/home2.jpg" alt="Happy family in their new home">
+        <div id="hero">
+            <section id="hero-msg">
+                <h1 class="site-title">CrystalClear Real Estate</h1>
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search for Listings">
+                    <button type="button" id="search-button">Search</button>
+                </div>
+                <!-- Welcome message box -->
+                <section class="welcome-box">
+                    <div class="welcome-content">
+                        <div class="welcome-text">
+                            <h2>Welcome to CrystalClear Real Estate</h2>
+                            <p>We are delighted to have you here. Explore our listings and find your dream home today!</p>
+                        </div>
+                        <img src="images/welcome.jpg" alt="Welcome Image" class="welcome-img">
                     </div>
-                    <div class="property-info">
-                        <h3>Modern Family Home</h3>
-                        <p>4 bed • 3 bath • 2,500 sq ft</p>
-                        <p>123 Main Street, Anytown</p>
-                        <p class="price">$450,000</p>
-                        <a href="#" class="cta-button">View Details</a>
+                </section>
+            </section>
+        </div>
+
+        <main class="home-grid">
+            <div id="background"></div>
+            
+            <img class="mountains" src="images/mountains.jpg" alt="Beautiful scenery">
+            <section class="msg">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="img1.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
                     </div>
+                  
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="img2.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="img3.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="images/listing1.jpg" alt="Spacious living room">
-                    </div>
-                    <div class="property-info">
-                        <h3>Luxury Apartment</h3>
-                        <p>2 bed • 2 bath • 1,200 sq ft</p>
-                        <p>456 Park Avenue, Anytown</p>
-                        <p class="price">$325,000</p>
-                        <a href="#" class="cta-button">View Details</a>
-                    </div>
+                <!-- The dots/circles -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                   ="dot" onclick="currentSlide(3)"></span>
                 </div>
-                
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="images/listing2.jpg" alt="Luxury kitchen with modern design">
-                    </div>
-                    <div class="property-info">
-                        <h3>Countryside Villa</h3>
-                        <p>5 bed • 4 bath • 3,800 sq ft</p>
-                        <p>789 Country Road, Anytown</p>
-                        <p class="price">$750,000</p>
-                        <a href="#" class="cta-button">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
+                <h2>More Than Just a Home</h2>
+                <p>Enjoy the breathtaking views and serene environments. From urban landscapes to countryside retreats, find your perfect home with CrystalClear Real Estate.</p>
+                <a class="join" href="listings.html">Explore Listings</a>
+            </section>
+        </main>
+        <footer>
+            <p>CrystalClear Real Estate &#169; 2025 - Sophie Silveira</p>
+            <p><a href="site-plan.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img width="70" src="images/facebook.png" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                </a>
             </div>
-            <div class="testimonial">
-                <img src="images/contact1.jpg" alt="Real estate agent assisting clients">
-                <p>"Working with Crystal Clear Housing was an absolute pleasure. They helped us find our dream home in just two weeks! Their knowledge of the local market was invaluable."</p>
-                <p class="name">- Sarah & Michael Johnson</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <h3>Contact Form</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Your Email">
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Your Message"></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-details">
-                        <p><strong>Address:</strong> 123 Real Estate Ave, City, State 12345</p>
-                        <p><strong>Phone:</strong> (555) 123-4567</p>
-                        <p><strong>Email:</strong> info@crystalclearhousing.com</p>
-                        <p><strong>Office Hours:</strong> Monday-Friday: 9AM-6PM, Saturday: 10AM-4PM</p>
-                    </div>
-                    <h3>Newsletter Sign Up</h3>
-                    <input type="email" placeholder="Your Email">
-                    <button>Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Crystal Clear Housing</h3>
-                    <p>Making your home buying and selling experience simple and stress-free since 2010.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="#">Home</a></p>
-                    <p><a href="#">Listings</a></p>
-                    <p><a href="#">About Us</a></p>
-                    <p><a href="#">Contact</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
+        </footer>
+    </div> <!-- End of #content -->
+</body>
+</html>
