@@ -34,6 +34,11 @@ button, .book, .join {
     cursor: pointer;
 }
 
+#search-bar {
+    padding: 10px;
+    width: 800px;
+}
+
 .book:hover, .join:hover {
     opacity: 0.8;
 }
@@ -43,6 +48,7 @@ button, .book, .join {
     transition: transform .5s;
     box-shadow: 5px 5px 10px var(--footer-bg);
 }
+
 .card-img:hover {
     opacity: .6;
     transform: scale(1.1);
@@ -50,9 +56,7 @@ button, .book, .join {
 
 /* Grid Layout */
 .home-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
+    margin: 50px;
 }
 
 .card-img, .mountains {
@@ -126,9 +130,11 @@ nav a {
 .msg {
     background-color: var(--footer-bg);
     color: white;
-    padding: 40px;
+    padding: 20px; /* Reduced from 40px to 20px */
+    margin: 20px auto; /* Added margin to center the box and reduce its size */
     line-height: 1.5em;
     box-shadow: 5px 5px 10px var(--footer-bg);
+    max-width: 800px; /* Added max-width to limit the width of the box */
 }
 
 /* Welcome Box */
@@ -136,10 +142,11 @@ nav a {
     border: 2px solid #ccc;
     padding: 20px;
     margin: 20px auto;
+    width: 1000px;
     background-color: #f9f9f9;
     text-align: center;
     border-radius: 10px;
-    max-width: 800px; /* Center the box and limit its width */
+    max-width: 800px;
 }
 
 .welcome-content {
@@ -150,7 +157,7 @@ nav a {
 
 .welcome-text {
     flex: 1;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
 .welcome-box h2 {
@@ -163,10 +170,102 @@ nav a {
 }
 
 .welcome-img {
-    width: 100px; /* Adjust the width as needed */
+    width: 100px;
     height: auto;
     margin-left: 20px;
     border-radius: 5px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* ✅ Fix: Make sure the first slide is visible initially */
+.mySlides:first-child {
+    display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+   15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /* Footer */
@@ -183,4 +282,52 @@ footer {
 footer a {
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 5px 5px 10px var(--footer-bg);
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.testimonial-slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.testimonial-slide h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--accent1-color);
+}
+
+.testimonial-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .testimonial-dot:hover {
+    background-color: #717171;
 }
