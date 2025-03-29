@@ -245,7 +245,7 @@ nav a {
 .dot {
     cursor: pointer;
     height: 15px;
-   15px;
+    width: 15px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
@@ -330,4 +330,116 @@ footer a {
 
 .active, .testimonial-dot:hover {
     background-color: #717171;
+}
+
+/* Contact Us Button */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent1-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Properties Section */
+.featured-properties {
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.property-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: var(--accent2-color);
+    color: black;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+}
+
+.flip-card-back p {
+    margin: 5px 0;
+}
+
+.property-btn {
+    display: inline-block;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 8px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.property-btn:hover {
+    background-color: #c01414;
 }
