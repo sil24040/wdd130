@@ -84,6 +84,7 @@ header .logo {
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav a {
