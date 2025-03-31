@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalClear Real Estate | Listings</title>
+    <link rel="stylesheet" href="listings.css">
+    <style>
+        /* Basic slideshow style */
+        .property-slide-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .property-slides {
+            display: none;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Show first slide by default */
+        .property-slides:first-child {
+            display: block;
+        }
+
+        .property-prev, .property-next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .property-prev {
+            left: 0;
+        }
+
+        .property-next {
+            right: 0;
+        }
+
+        /* Property Card Styles */
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 330px;
+        }
+
+        .property-info {
+            padding: 15px 0;
+            text-align: left;
+        }
+
+        .property-info h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .property-info p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .property-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* Page Title Styles */
+        h2.page-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin: 40px 0 20px;
+            font-family: var(--heading-font);
+        }
+
+        h3.section-title {
+            text-align: center;
+            font-size: 1.8em;
+            color: var(--accent1-color);
+            margin: 30px 0;
+            font-family: var(--heading-font);
+        }
+
+        /* Fix for footer alignment */
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="about.html">About Us</a>
+                <a href="contactuspage.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <main class="home-grid">
+            <h2 class="page-title">Our Listings</h2>
+
+            <!-- Featured Properties Section -->
+            <section class="featured-properties">
+                <h3 class="section-title">Available Apartments</h3>
+                <div class="property-container">
+                    <!-- Property 1 -->
+                    <div class="property-card">
+                        <div class="property-slide-container">
+                            <img class="property-slides" src="laxelyclose1.jpg" alt="London Apartment">
+                            <img class="property-slides" src="laxelyclose2.jpg" alt="London Apartment">
+                            <img class="property-slides" src="laxelyclose3.jpg" alt="London Apartment">
+                            <button class="property-prev" onclick="plusSlides(-1, 0)">&#10094;</button>
+                            <button class="property-next" onclick="plusSlides(1, 0)">&#10095;</button>
+                        </div>
+                        <div class="property-info">
+                            <h3>Spacious Room in Camden</h3>
+                            <p><strong>Location:</strong> Camden, London</p>
+                            <p><strong>Price:</strong> £1,200/month</p>
+                            <p><strong>Availability:</strong> Available from May 2025</p>
+                            <p>Beautifully renovated studio in London's vibrant Camden district.</p>
+                        </div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="property-card">
+                        <div class="property-slide-container">
+                            <img class="property-slides" src="images/bedroom.png" alt="Camden Room">
+                            <img class="property-slides" src="images/kitchen.jpeg" alt="Camden Room">
+                            <button class="property-prev" onclick="plusSlides(-1, 1)">&#10094;</button>
+                            <button class="property-next" onclick="plusSlides(1, 1)">&#10095;</button>
+                        </div>
+                        <div class="property-info">
+                            <h3>Modern Studio in Soho</h3>
+                            <p><strong>Location:</strong> Soho, London</p>
+                            <p><strong>Price:</strong> £950/month</p>
+                            <p><strong>Availability:</strong> Available now</p>
+                            <p>Large bedroom with ensuite bathroom in a shared house in Soho.</p>
+                        </div>
+                    </div>
+
+                    <!-- Property 3 -->
+                    <div class="property-card">
+                        <div class="property-slide-container">
+                            <img class="property-slides" src="images/livingroom2.png" alt="Shoreditch Loft">
+                            <img class="property-slides" src="images/bedroom1.png" alt="Shoreditch Loft">
+                            <img class="property-slides" src="images/kitchen12.png" alt="Shoreditch Loft">
+                            <img class="property-slides" src="images/livingroom2.png" alt="Shoreditch Loft">
+                            <button class="property-prev" onclick="plusSlides(-1, 2)">&#10094;</button>
+                            <button class="property-next" onclick="plusSlides(1, 2)">&#10095;</button>
+                        </div>
+                        <div class="property-info">
+                            <h3>One Bed Apartment</h3>
+                            <p><strong>Location:</strong> Central London</p>
+                            <p><strong>Price:</strong> £1,500/month</p>
+                            <p><strong>Availability:</strong> Available from June 2025</p>
+                            <p>One-bedroom apartment in Central London, perfect for professionals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Property 4 -->
+                    <div class="property-card">
+                        <div class="property-slide-container">
+                            <img class="property-slides" src="riversideapartment1.jpg" alt="Riverside Apartment">
+                            <img class="property-slides" src="riversideapartment2.jpg" alt="Riverside Apartment">
+                            <img class="property-slides" src="riversideapartment3.jpg" alt="Riverside Apartment">
+                            <button class="property-prev" onclick="plusSlides(-1, 3)">&#10094;</button>
+                            <button class="property-next" onclick="plusSlides(1, 3)">&#10095;</button>
+                        </div>
+                        <div class="property-info">
+                            <h3>Riverside View Apartment</h3>
+                            <p><strong>Location:</strong> River Thames, London</p>
+                            <p><strong>Price:</strong> £2,000/month</p>
+                            <p><strong>Availability:</strong> Available from April 2025</p>
+                            <p>Modern apartment with stunning river views in the heart of London.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Us Section -->
+            <div style="text-align:center; margin-top: 40px;">
+                <a href="contactus.html" class="contact-button">Contact Us</a>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>CrystalClear &#169; 2025 - Sophie Silveira</p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img width="70" src="facebook copy.png" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="style copy.png" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram copy.png" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        let slideIndex = [1, 1, 1, 1]; // Keep track of slide index for each property
+        let slideId = ["property-slides", "property-slides", "property-slides", "property-slides"];
+
+        // Function to show slides
+        function showSlides(n, x) {
+            let i;
+            let slides = document.getElementsByClassName(slideId[x]);
+            let startIndex = x * 3; // Each property has 3 slides
+            let endIndex = startIndex + 3;
+            
+            if (n > 3) {slideIndex[x] = 1}
+            if (n < 1) {slideIndex[x] = 3}
+            
+            // Hide all slides for this property
+            for (i = startIndex; i < endIndex && i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Show the current slide for this property
+            let currentSlideIndex = startIndex + slideIndex[x] - 1;
+            if (currentSlideIndex < slides.length) {
+                slides[currentSlideIndex].style.display = "block";
+            }
+        }
+
+        // Function to change slide
+        function plusSlides(n, x) {
+            showSlides(slideIndex[x] += n, x);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialize each property's slideshow
+            let allSlides = document.getElementsByClassName("property-slides");
+            
+            // Show the first slide of each property and hide others
+            for (let i = 0; i < allSlides.length; i++) {
+                // Only show first slide of each property (indexes 0, 3, 6, 9)
+                if (i % 3 === 0) {
+                    allSlides[i].style.display = "block";
+                } else {
+                    allSlides[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

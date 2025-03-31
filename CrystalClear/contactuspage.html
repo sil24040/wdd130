@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalClear Real Estate | Contact Us</title>
+    <link rel="stylesheet" href="contactuspage.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="about.html">About Us</a>
+                <a href="contactuspage.html">Contact Us</a>
+            </nav>
+        </header>
+        
+        <main class="contact-grid">
+            <section class="contact-info">
+                <h1>Contact CrystalClear Real Estate</h1>
+                <p>We’d love to hear from you! Whether you have a question about our listings, pricing, or anything else, our team is ready to answer all your questions.</p>
+                
+                <h2>Our Office</h2>
+                <p>CrystalClear Real Estate</p>
+                <p>123 London Street, London, UK</p>
+                <p>Email: contact@crystalclear.com</p>
+                <p>Phone: +44 20 7946 0123</p>
+                
+                <h2>Business Hours</h2>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <div id="feedback"></div>
+                <form action="#" method="post">
+                    <p>
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="user_name" placeholder="name here" required>
+                    </p>
+                    <p>
+                      <label for="mail">Email:</label>
+                      <input type="email" id="mail" name="user_email" placeholder="youremail@example.com" required>
+                    </p>
+                    <p>
+                      <label for="msg">Message:</label>
+                      <textarea id="msg" name="user_message" required></textarea>
+                    </p>
+                    <p class="button">
+                        <button type="submit">Send your message</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>CrystalClear &#169; 2025 - Sophie Silveira</p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img width="70" src="facebook copy.png" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="style copy.png" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram copy.png" alt="Instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const feedbackElement = document.getElementById('feedback');
+        const formElement = document.forms[0];
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            feedbackElement.style.display = "block";
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
