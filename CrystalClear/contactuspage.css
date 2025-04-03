@@ -73,8 +73,10 @@ button, .book, .join {
 header {
     background-color: var(--primary-color);
     padding: 20px;
-    display: grid;
-    grid-template-columns: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2000px;
 }
 
 header .logo {
@@ -83,13 +85,20 @@ header .logo {
 
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 20px;
 }
 
 nav a {
     color: #fcfbfb;
     text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
 }
 
 /* Hero Section */
