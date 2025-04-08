@@ -25,7 +25,7 @@ body {
 
 button, .book, .join {
     background-color: var(--accent1-color);
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     padding: 15px 30px;
@@ -347,7 +347,7 @@ footer a {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--accent1-color);
-    color: white;
+    color: white!important;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
