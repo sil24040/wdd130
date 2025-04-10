@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrystalClear Real Estate - About Us</title>
-    <link rel="stylesheet" href="aboutus.css">
+    <title>CrystalClear Real Estate | About Us</title>
+    <link rel="stylesheet" href="contactuspage.css">
 </head>
 <body>
     <div id="content">
@@ -13,10 +13,6 @@
             <a id="logo_link" href="index.html">
                 <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
             </a>
-            <h2 style="color: white;
-            margin-left: 30px;
-            margin-right: auto;">CrystalClear Real Estate</h2>
-            
             <nav>
                 <a href="index.html">Home</a>
                 <a href="listings.html">Listings</a>
@@ -56,8 +52,9 @@
                 </div>
             </section>
         </main>
+
         <footer>
-            <p>CrystalClear © 2025 - Sophie Silveira</p>
+            <p>CrystalClear &#169; 2025 - Sophie Silveira</p>
             <p><a href="site-plan-rafting.html">Site Plan</a></p>
             <p><a href="contactus.html">Contact Us</a></p>
             <div class="social">
@@ -73,5 +70,73 @@
             </div>
         </footer>
     </div>
+    
+    <!-- Add CSS for team member styles since we're now using contactuspage.css -->
+    <style>
+        /* About Us Section */
+        .about-us {
+            padding: 40px;
+            background-color: var(--background-color);
+            text-align: left;
+        }
+
+        .about-us h1 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .team {
+            margin-top: 40px;
+        }
+
+        .team h2 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-photo {
+            width: 100px;
+            height: 100px; /* Fixed height to match width */
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover; /* This ensures images maintain aspect ratio and fill the space */
+        }
+
+        .team-member h3 {
+            margin: 0;
+            font-family: var(--heading-font);
+            color: var(--accent1-color);
+        }
+
+        .team-member p {
+            margin: 5px 0;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 900px) {
+            .team-member {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .team-photo {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </body>
 </html>
