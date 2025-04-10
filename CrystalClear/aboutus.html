@@ -2,76 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Corrected to 'X-UA-Compatible' -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrystalClear Real Estate | About Us</title>
     <link rel="stylesheet" href="contactuspage.css">
-</head>
-<body>
-    <div id="content">
-        <header>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="listings.html">Listings</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contactuspage.html">Contact Us</a>
-            </nav>
-        </header>   
 
-        <main class="home-grid">
-            <section class="about-us">
-                <h1>About Us</h1>
-                <div class="about-content">
-                    <p>Welcome to CrystalClear Real Estate! We are dedicated to providing high-quality rooms for rent across London. Our mission is to offer affordable and stylish accommodations in prime locations, making it easy for you to find your perfect home.</p>
-                    <p>Whether you're a student, a young professional, or simply looking for a comfortable place to stay, we have a variety of options to suit your needs. Our team is committed to delivering excellent service and ensuring a smooth and stress-free experience for all our clients.</p>
-                    <p>At CrystalClear Real Estate, we believe in transparency, reliability, and customer satisfaction. Our goal is to help you find a home that meets your expectations and fits your lifestyle. Explore our listings and let us assist you in finding your ideal living space in London today!</p>
-                </div>
-                <div class="team">
-                    <h2>Meet Our Team</h2>
-                    <div class="team-member">
-                        <img src="images/sophie.jpeg" alt="Team Member 1" class="team-photo">
-                        <h3>Sophie Silveira</h3>
-                        <p>Founder & CEO</p>
-                        <p>Sophie has over 20 years of experience in the real estate industry and is passionate about helping people find their dream homes.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/ivan.jpeg" alt="Team Member 2" class="team-photo">
-                        <h3>Ivan Ribeiro</h3>
-                        <p>Operations Manager</p>
-                        <p>Ivan oversees the day-to-day operations and ensures that everything runs smoothly for our clients.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/milena.jpeg" alt="Team Member 3" class="team-photo">
-                        <h3>Milena Tavares</h3>
-                        <p>Customer Service Lead</p>
-                        <p>Milena is dedicated to providing exceptional customer service and making sure our clients are satisfied with their experience.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>CrystalClear &#169; 2025 - Sophie Silveira</p>
-            <p><a href="site-plan-rafting.html">Site Plan</a></p>
-            <p><a href="contactus.html">Contact Us</a></p>
-            <div class="social">
-                <a href="https://facebook.com" target="_blank">
-                    <img width="70" src="facebook copy.png" alt="Facebook icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="style copy.png" alt="Twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="instagram copy.png" alt="Instagram icon">
-                </a>
-            </div>
-        </footer>
-    </div>
-    
-    <!-- Add CSS for team member styles since we're now using contactuspage.css -->
+    <!-- Moved internal styles to head -->
     <style>
         /* About Us Section */
         .about-us {
@@ -113,7 +49,7 @@
             height: 100px; /* Fixed height to match width */
             border-radius: 50%;
             margin-right: 20px;
-            object-fit: cover; /* This ensures images maintain aspect ratio and fill the space */
+            object-fit: cover; /* Ensures image aspect ratio is maintained */
         }
 
         .team-member h3 {
@@ -138,5 +74,75 @@
             }
         }
     </style>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="crystalClear.png" alt="CrystalClear Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="listings.html">Listings</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactuspage.html">Contact Us</a>
+            </nav>
+        </header>   
+
+        <main class="home-grid">
+            <section class="about-us">
+                <h1>About Us</h1>
+                <div class="about-content">
+                    <p>Welcome to CrystalClear Real Estate! We are dedicated to providing high-quality rooms for rent across London. Our mission is to offer affordable and stylish accommodations in prime locations, making it easy for you to find your perfect home.</p>
+                    <p>Whether you're a student, a young professional, or simply looking for a comfortable place to stay, we have a variety of options to suit your needs. Our team is committed to delivering excellent service and ensuring a smooth and stress-free experience for all our clients.</p>
+                    <p>At CrystalClear Real Estate, we believe in transparency, reliability, and customer satisfaction. Our goal is to help you find a home that meets your expectations and fits your lifestyle. Explore our listings and let us assist you in finding your ideal living space in London today!</p>
+                </div>
+                <div class="team">
+                    <h2>Meet Our Team</h2>
+                    <div class="team-member">
+                        <img src="images/sophie.jpeg" alt="Sophie Silveira" class="team-photo">
+                        <div>
+                            <h3>Sophie Silveira</h3>
+                            <p>Founder & CEO</p>
+                            <p>Sophie has over 20 years of experience in the real estate industry and is passionate about helping people find their dream homes.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/ivan.jpeg" alt="Ivan Ribeiro" class="team-photo">
+                        <div>
+                            <h3>Ivan Ribeiro</h3>
+                            <p>Operations Manager</p>
+                            <p>Ivan oversees the day-to-day operations and ensures that everything runs smoothly for our clients.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/milena.jpeg" alt="Milena Tavares" class="team-photo">
+                        <div>
+                            <h3>Milena Tavares</h3>
+                            <p>Customer Service Lead</p>
+                            <p>Milena is dedicated to providing exceptional customer service and making sure our clients are satisfied with their experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>CrystalClear &#169; 2025 - Sophie Silveira</p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img width="70" src="facebook-copy.png" alt="Facebook icon"> <!-- Corrected image file name -->
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="style-copy.png" alt="Twitter icon"> <!-- Corrected image file name -->
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram-copy.png" alt="Instagram icon"> <!-- Corrected image file name -->
+                </a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
